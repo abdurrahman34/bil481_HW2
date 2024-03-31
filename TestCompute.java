@@ -19,5 +19,10 @@ public class TestCompute {
         compute = new Compute(mq);
     }
 
-   
+    @Test
+    public void testEmptyQueue() {
+        when(mq.size()).thenReturn(0);
+        assertEquals(-1, compute.countNumberOfOccurrences("element"));
+    }
+
 }

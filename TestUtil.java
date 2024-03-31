@@ -15,5 +15,9 @@ public class TestUtil {
         util = new Util();
     }
 
-    
+    @Test
+    public void testSingleArgShouldReturnFalse() {
+        assertFalse("Expected false when only one argument is passed", util.compute(2));
+    }
+
 }

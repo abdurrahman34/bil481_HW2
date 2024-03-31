@@ -37,5 +37,11 @@ public class TestUtil {
         assertFalse("Expected false when sum is not divisible by any of the arguments", util.compute(2, 3, 8));
     }
 
-   
+    @Test
+    public void testOddNumberOfArgsSumDivisibleByAtLeastOneShouldReturnTrue() {
+        // 2 + 3 + 3 = 8, which is divisible by 2.
+        assertTrue("Expected true when sum is divisible by at least one of the arguments", util.compute(2, 3, 3));
+    }
+
+    
 }

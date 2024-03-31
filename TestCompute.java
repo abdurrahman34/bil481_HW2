@@ -25,4 +25,12 @@ public class TestCompute {
         assertEquals(-1, compute.countNumberOfOccurrences("element"));
     }
 
+    @Test
+    public void testElementNotInQueue() {
+        when(mq.size()).thenReturn(3);
+        when(mq.contains("element")).thenReturn(false);
+        assertEquals(0, compute.countNumberOfOccurrences("element"));
+    }
+
+ 
 }

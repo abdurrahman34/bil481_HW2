@@ -30,5 +30,12 @@ public class TestUtil {
         util.compute(1, 0, 3);
     }
 
-    
+    @Test
+    public void testOddNumberOfArgsSumNotDivisibleByAnyShouldReturnFalse() {
+        // Correcting this test to ensure that the sum is not divisible by any of the arguments
+        // Using 2, 3, 8 for this purpose, where sum = 12, which is not divisible by 1, 3, or 8 without remainder.
+        assertFalse("Expected false when sum is not divisible by any of the arguments", util.compute(2, 3, 8));
+    }
+
+   
 }

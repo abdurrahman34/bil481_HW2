@@ -24,4 +24,11 @@ public class TestUtil {
     public void testEvenNumberOfArgsShouldReturnFalse() {
         assertFalse("Expected false with an even number of arguments", util.compute(1, 2));
     }
-  }
+
+    @Test(expected = RuntimeException.class)
+    public void testZeroArg() {
+        util.compute(1, 0, 3);
+    }
+
+    
+}

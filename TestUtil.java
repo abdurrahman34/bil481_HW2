@@ -43,5 +43,9 @@ public class TestUtil {
         assertTrue("Expected true when sum is divisible by at least one of the arguments", util.compute(2, 3, 3));
     }
 
-    
+    @Test
+    public void testOddNumberOfArgsAllSameShouldReturnTrue() {
+        // All arguments are the same, and their sum is divisible by each (e.g., 2 + 2 + 2 = 6, divisible by 2)
+        assertTrue("Expected true when all arguments are the same and sum is divisible", util.compute(2, 2, 2));
+    }
 }

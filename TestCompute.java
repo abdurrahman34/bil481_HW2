@@ -32,5 +32,15 @@ public class TestCompute {
         assertEquals(0, compute.countNumberOfOccurrences("element"));
     }
 
- 
+    @Test
+    public void testElementOccursOnce() {
+        when(mq.size()).thenReturn(3);
+        when(mq.contains("element")).thenReturn(true);
+        when(mq.getAt(0)).thenReturn("element");
+        when(mq.getAt(1)).thenReturn("anotherElement");
+        when(mq.getAt(2)).thenReturn("yetAnotherElement");
+        assertEquals(1, compute.countNumberOfOccurrences("element"));
+    }
+
+
 }
